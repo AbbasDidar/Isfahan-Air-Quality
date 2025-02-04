@@ -41,7 +41,7 @@ simulated_data$PM2.5 <- with(simulated_data,
                                rnorm(n_rows, mean = 0, sd = 10))
 
 # Sort by date for time series analysis
-simulated_data <- simulated_data %>% arrange(Date)
+simulated_data <- simulated_data |> mutate(PM2.5 = round(PM2.5, 2)) |> arrange(Date)
 
 # Update UI to include the new Forecast tab
 ui <- navset_card_tab(

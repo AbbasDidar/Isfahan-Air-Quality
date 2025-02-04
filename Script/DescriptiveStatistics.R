@@ -128,3 +128,5 @@ ggplot(Monthly_Mean, aes(x = Month, y = WindSpeed_mean, group = 1)) +
        y = "Wind Speed Mean (m/s)") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
